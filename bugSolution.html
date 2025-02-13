@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Efficient HTML Content Append</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Efficiently using insertAdjacentHTML
+    document.getElementById("myDiv").insertAdjacentHTML('beforeend', '<p>This is a paragraph.</p>');
+    document.getElementById("myDiv").insertAdjacentHTML('beforeend', '<p>Another paragraph.</p>');
+    //Alternative using createElement and appendChild for better control and flexibility
+    let newParagraph = document.createElement('p');
+    newParagraph.textContent = 'Yet another paragraph using createElement';
+    document.getElementById('myDiv').appendChild(newParagraph);
+  </script>
+</body>
+</html>
