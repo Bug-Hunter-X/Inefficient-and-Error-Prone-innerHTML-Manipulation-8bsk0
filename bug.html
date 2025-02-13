@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to append content
+    document.getElementById("myDiv").innerHTML += "<p>This is a paragraph.</p>"; 
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<p>Another paragraph.</p>";
+  </script>
+</body>
+</html>
